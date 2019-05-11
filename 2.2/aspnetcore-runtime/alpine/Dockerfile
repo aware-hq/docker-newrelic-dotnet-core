@@ -1,6 +1,6 @@
 FROM alpine:3.9 as source
-ARG NewRelicVersion=8.15.455.0
-ARG NewRelicUrl=https://download.newrelic.com/dot_net_agent/previous_releases/${NewRelicVersion}/newrelic-netcore20-agent_${NewRelicVersion}_amd64.tar.gz
+ENV NewRelicVersion=8.15.455.0
+ENV NewRelicUrl=https://download.newrelic.com/dot_net_agent/previous_releases/${NewRelicVersion}/newrelic-netcore20-agent_${NewRelicVersion}_amd64.tar.gz
 ARG NewRelicHome=/usr/local/newrelic-netcore20-agent
 WORKDIR /newrelic
 RUN wget "${NewRelicUrl}" -O newrelic.tar.gz && gzip -dc newrelic.tar.gz | tar -xf -
