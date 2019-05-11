@@ -9,4 +9,4 @@ docker build \
   --build-arg NewRelicVersion=${NEW_RELIC_VERSION} \
   --build-arg NewRelicUrl=${NEW_RELIC_URL} \
   --build-arg CONTAINER_IMAGE=microsoft/dotnet:${DOCKER_TAG} \
-  -t $IMAGE_NAME .
+  -f $DOCKERFILE_PATH -t $IMAGE_NAME .
