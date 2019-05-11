@@ -1,0 +1,12 @@
+#!/bin/bash
+# hooks/build
+# https://docs.docker.com/docker-cloud/builds/advanced/
+
+# $IMAGE_NAME var is injected into the build so the tag is correct.
+echo "[***] Build hook running"
+
+docker build \
+  --build-arg NewRelicVersion=${NEW_RELIC_VERSION} \
+  --build-arg NewRelicUrl=${NEW_RELIC_URL} \
+  --build-arg CONTAINER_IMAGE=microsoft/dotnet:${DOCKER_TAG} \
+  t $IMAGE_NAME .
