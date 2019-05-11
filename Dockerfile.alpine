@@ -1,10 +1,10 @@
+ARG CONTAINER_IMAGE=2.2-runtime-alpine
 FROM alpine:3.9 as source
 ARG NewRelicVersion=8.15.455.0
 ARG NewRelicUrl=https://download.newrelic.com/dot_net_agent/previous_releases/${NewRelicVersion}/newrelic-netcore20-agent_${NewRelicVersion}_amd64.tar.gz
 WORKDIR /newrelic
-RUN wget "${NewRelicUrl}" -O newrelic.tar.gz && gzip -dc newrelic.tar.gz | tar -xf -    
+RUN wget "${NewRelicUrl}" -O newrelic.tar.gz && gzip -dc newrelic.tar.gz | tar -xf -  && rm newrelic.tar.gz
 
-ARG CONTAINER_IMAGE=2.2-runtime-alpine
 FROM $CONTAINER_IMAGE
 ENV ASPNETCORE_ENVIRONMENT=Production
 ENV CORECLR_ENABLE_PROFILING=1 \
