@@ -32,4 +32,4 @@ jobs:
       - DOCKERFILE_PATH="Dockerfile.deb"
 
 script:
-  - ./build-image.sh
+  - bash build-image.sh
