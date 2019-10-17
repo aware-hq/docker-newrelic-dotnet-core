@@ -7,29 +7,13 @@ env:
     - NEW_RELIC_VERSION="8.17.438.0"
     - NEW_RELIC_URL="https://download.newrelic.com/dot_net_agent/previous_releases/8.17.438.0/newrelic-netcore20-agent_8.17.438.0_amd64.tar.gz"
     - IMAGE_NAME="awareoss/newrelic-dotnet"
-  matrix:
-    - DOCKERFILE_PATH="Dockerfile.deb"
-    - DOCKERFILE_PATH="Dockerfile.alpine"
-    - IMAGE_TAG="2.2"
-    - IMAGE_TAG="3.0"
-    - IMAGE_TAG="2.2-alpine"
-    - IMAGE_TAG="3.0-alpine"
-    - CONTAINER_IMAGE=mcr.microsoft.com/dotnet/core/aspnet
-    - CONTAINER_IMAGE=mcr.microsoft.com/dotnet/core/runtime
-jobs:
-  allow_failures:
-    - env:
-      - IMAGE_TAG="2.2"
-      - DOCKERFILE_PATH="Dockerfile.alpine"
-    - env:
-      - IMAGE_TAG="3.0"
-      - DOCKERFILE_PATH="Dockerfile.alpine"
-    - env:
-      - IMAGE_TAG="2.2-alpine"
-      - DOCKERFILE_PATH="Dockerfile.deb"
-    - env:
-      - IMAGE_TAG="3.0-alpine"
-      - DOCKERFILE_PATH="Dockerfile.deb"
 
 script:
-  - bash build-image.sh
+  - bash build-image.sh Dockerfile.deb mcr.microsoft.com/dotnet/core/aspnet 2.2
+  - bash build-image.sh Dockerfile.deb mcr.microsoft.com/dotnet/core/runtime 2.2
+  - bash build-image.sh Dockerfile.alpine mcr.microsoft.com/dotnet/core/aspnet 2.2-alpine
+  - bash build-image.sh Dockerfile.alpine mcr.microsoft.com/dotnet/core/runtime 2.2-alpine
+  - bash build-image.sh Dockerfile.deb mcr.microsoft.com/dotnet/core/aspnet 3.0
+  - bash build-image.sh Dockerfile.deb mcr.microsoft.com/dotnet/core/runtime 3.0
+  - bash build-image.sh Dockerfile.alpine mcr.microsoft.com/dotnet/core/aspnet 3.0-alpine
+  - bash build-image.sh Dockerfile.alpine mcr.microsoft.com/dotnet/core/runtime 3.0-alpine
