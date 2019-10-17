@@ -7,7 +7,7 @@ env:
     - NEW_RELIC_VERSION="8.17.438.0"
     - NEW_RELIC_URL="https://download.newrelic.com/dot_net_agent/previous_releases/8.17.438.0/newrelic-netcore20-agent_8.17.438.0_amd64.tar.gz"
     - IMAGE_NAME="awareoss/newrelic-dotnet"
-  jobs:
+  matrix:
     - DOCKERFILE_PATH="Dockerfile.deb"
     - DOCKERFILE_PATH="Dockerfile.alpine"
     - IMAGE_TAG="2.2"
@@ -17,7 +17,7 @@ env:
     - CONTAINER_IMAGE=mcr.microsoft.com/dotnet/core/aspnet
     - CONTAINER_IMAGE=mcr.microsoft.com/dotnet/core/runtime
 jobs:
-  exclude:
+  allow_failures:
     - env:
       - IMAGE_TAG="2.2"
       - DOCKERFILE_PATH="Dockerfile.alpine"
