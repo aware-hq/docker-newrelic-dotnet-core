@@ -1,11 +1,11 @@
 #!/bin/bash
-DOCKERFILE_PATH=${1}
-CONTAINER_IMAGE=${2}
-IMAGE_TAG=${3}
+#DOCKERFILE_PATH=${1}
+#CONTAINER_IMAGE=${2}
+#IMAGE_TAG=${3}
 docker build \
   --build-arg NewRelicVersion=${NEW_RELIC_VERSION} \
   --build-arg NewRelicUrl=${NEW_RELIC_URL} \
-  --build-arg CONTAINER_IMAGE=${CONTAINER_IMAGE}/${IMAGE_TAG} \
+  --build-arg CONTAINER_IMAGE=${CONTAINER_IMAGE}:${IMAGE_TAG} \
   --build-arg VERSION=$(git describe --tags --always) \
   --build-arg COMMIT=$(git rev-parse HEAD) \
   --build-arg URL=$(git config --get remote.origin.url) \
