@@ -9,9 +9,9 @@ env:
     - IMAGE_NAME="awareoss/newrelic-dotnet"
   matrix:
     - IMAGE_TAG="2.2" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
-    - IMAGE_TAG="2.2" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/runtime" IMAGE_RUNTIME="runtime"
-    - IMAGE_TAG="3.0" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/aspnet" IMAGE_RUNTIME="aspnet"
-    - IMAGE_TAG="3.0" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/runtime" IMAGE_RUNTIME="runtime"
+    - IMAGE_TAG="2.2" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
+    - IMAGE_TAG="3.0" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
+    - IMAGE_TAG="3.0" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
     - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
     - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
     - IMAGE_TAG="3.0-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
