@@ -13,8 +13,6 @@ ARG URL
 ARG VERSION
 
 LABEL org.label-schema.schema-version="1.0" \
-    org.label-schema.build-date=$DATE \
-    org.label-schema.vendor="Michal Klempa" \
     org.label-schema.name="awareoss/newrelic-dotnet" \
     org.label-schema.description="dotnet core docker image containing newrelic .NET agent" \
     org.label-schema.url="https://hub.docker.com/r/awareoss/newrelic-dotnet" \
