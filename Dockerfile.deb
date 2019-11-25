@@ -8,7 +8,6 @@ RUN wget "${NewRelicUrl}" -O newrelic.tar.gz && gzip -dc newrelic.tar.gz | tar -
 FROM $CONTAINER_IMAGE as destination
 ARG BRANCH
 ARG COMMIT
-ARG DATE
 ARG URL
 ARG VERSION
 
