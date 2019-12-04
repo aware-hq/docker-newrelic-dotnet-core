@@ -4,18 +4,22 @@ services:
 
 env:
   global:
-    - NEW_RELIC_VERSION="8.20.262.0"
-    - NEW_RELIC_URL="https://download.newrelic.com/dot_net_agent/previous_releases/8.20.262.0/newrelic-netcore20-agent_8.20.262.0_amd64.tar.gz"
+    - NEW_RELIC_VERSION="8.21.34.0"
+    - NEW_RELIC_URL="https://download.newrelic.com/dot_net_agent/previous_releases/8.21.34.0/newrelic-netcore20-agent_8.21.34.0_amd64.tar.gz"
     - IMAGE_NAME="awareoss/newrelic-dotnet"
   matrix:
     - IMAGE_TAG="2.2" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
     - IMAGE_TAG="2.2" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
     - IMAGE_TAG="3.0" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
     - IMAGE_TAG="3.0" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
+    - IMAGE_TAG="3.1" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
+    - IMAGE_TAG="3.1" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
     - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
     - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
     - IMAGE_TAG="3.0-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
     - IMAGE_TAG="3.0-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
+    - IMAGE_TAG="3.1-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
+    - IMAGE_TAG="3.1-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
 
 jobs:
   allow_failures:
