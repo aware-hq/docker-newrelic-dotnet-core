@@ -5,7 +5,7 @@ ARG NewRelicUrl=https://download.newrelic.com/dot_net_agent/previous_releases/${
 WORKDIR /newrelic
 RUN wget "${NewRelicUrl}" -O newrelic.tar.gz && gzip -dc newrelic.tar.gz | tar -xf - && rm newrelic.tar.gz
 
-FROM $CONTAINER_IMAGE-alpine
+FROM $CONTAINER_IMAGE
 ARG BRANCH
 ARG COMMIT
 ARG URL
