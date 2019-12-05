@@ -14,12 +14,12 @@ env:
     - IMAGE_TAG="3.0" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
     - IMAGE_TAG="3.1" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
     - IMAGE_TAG="3.1" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
-    - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
-    - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
-    - IMAGE_TAG="3.0-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
-    - IMAGE_TAG="3.0-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
-    - IMAGE_TAG="3.1-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
-    - IMAGE_TAG="3.1-alpine" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
+    - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.alpine" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
+    - IMAGE_TAG="2.2-alpine" DOCKERFILE_PATH="Dockerfile.alpine" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
+    - IMAGE_TAG="3.0-alpine" DOCKERFILE_PATH="Dockerfile.alpine" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
+    - IMAGE_TAG="3.0-alpine" DOCKERFILE_PATH="Dockerfile.alpine" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
+    - IMAGE_TAG="3.1-alpine" DOCKERFILE_PATH="Dockerfile.alpine" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
+    - IMAGE_TAG="3.1-alpine" DOCKERFILE_PATH="Dockerfile.alpine" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="runtime"
 
 jobs:
   allow_failures:
