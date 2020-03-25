@@ -4,8 +4,8 @@ services:
 
 env:
   global:
-    - NEW_RELIC_VERSION="8.21.34.0"
-    - NEW_RELIC_URL="https://download.newrelic.com/dot_net_agent/previous_releases/8.21.34.0/newrelic-netcore20-agent_8.21.34.0_amd64.tar.gz"
+    - NEW_RELIC_VERSION="8.25.214.0"
+    - NEW_RELIC_URL="https://download.newrelic.com/dot_net_agent/previous_releases/8.25.214.0/newrelic-netcore20-agent_8.25.214.0_amd64.tar.gz"
     - IMAGE_NAME="awareoss/newrelic-dotnet"
   matrix:
     - IMAGE_TAG="2.2" DOCKERFILE_PATH="Dockerfile.deb" CONTAINER_IMAGE="mcr.microsoft.com/dotnet/core/" IMAGE_RUNTIME="aspnet"
